@@ -1,0 +1,76 @@
+//  Table of Contents:
+//
+//   1. Global
+//   2. Base Typography
+//   3. Typography Helpers
+//================================
+
+
+// 1. Global
+// ---------------------
+$palettes: (
+  green:(
+    base:#178E96,
+    light:#9BCED2
+  ),
+  grey: (
+    base:#4A4A4A,
+    light:#D8D8D8,
+    dark:#EDEDED
+  )
+);
+
+@function pick-color($selected-color, $tone: 'base') {
+    @return map-get(map-get($palettes, $selected-color), $tone);
+}
+// 2. Base Typography
+// ---------------------
+$body-font-family: 'Nunito Sans', Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: $body-font-family;
+$regular:400;
+$light: 300;
+$bold: 700;
+$extra-bold:800;
+
+h1, h2, h3, h4, h5, h6, p {
+  color: pick-color(grey, base);
+}
+
+h1 {
+  font-weight: $light;
+  font-size:2rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.0625rem;
+}
+
+h2 {
+  font-weight: $bold;
+  font-size:1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.125rem;
+}
+
+h3 {
+  font-weight: $extra-bold;
+  font-size:1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.125rem;
+}
+
+p {
+  font-weight: $regular;
+  font-size:1rem;
+  line-height: 1.5rem;
+}
+
+p.small {
+  font-weight: $regular;
+  font-size:0.75rem;
+  line-height: 1rem;
+}
+
+// 2. Typography helpers
+// ---------------------
+.uppercase {
+  text-transform: uppercase;
+}
