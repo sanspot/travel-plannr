@@ -63,7 +63,7 @@ p {
   line-height: 1.5rem;
 }
 
-p.small {
+p.smallBody {
   font-weight: $regular;
   font-size:0.75rem;
   line-height: 1rem;
@@ -73,4 +73,7 @@ p.small {
 // ---------------------
 .uppercase {
   text-transform: uppercase;
+}
+.rightAllign {
+  text-align: right;
 }
