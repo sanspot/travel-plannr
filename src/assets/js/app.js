@@ -1,9 +1,9 @@
 $(document).foundation();
 
 
-var sly = new Sly(jQuery('.frame'), options = {
+var sly = new Sly('.frame',  {
       horizontal: 1,
-      itemNav: 'forceCentered',
+      itemNav: 'basic',
       smart: 1,
       activateOn: 'click',
       activateMiddle: 1,
