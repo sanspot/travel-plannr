@@ -3,6 +3,7 @@
 //   1. Global
 //   2. Base Typography
 //   3. Typography Helpers
+//   4. Look and feel
 //================================
 
 
@@ -63,14 +64,45 @@ p {
   line-height: 1.5rem;
 }
 
-p.small {
+p.smallBody {
   font-weight: $regular;
   font-size:0.75rem;
   line-height: 1rem;
 }
 
-// 2. Typography helpers
+// 3. Typography helpers
 // ---------------------
 .uppercase {
   text-transform: uppercase;
+}
+.rightAllign {
+  text-align: right;
+}
+
+
+
+// 4. Look and feel
+// ---------------------
+.frame {
+  width: 100%;
+  height:600px;
+  padding: 0;
+}
+
+.slidee {
+  padding: 0;
+  margin: 0 5px 0 0;
+  height: 100%;
+  float: left;
+  list-style: none;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.frame .slidee li {
+  margin-right: 2rem;
+  float: left;
+  width: 300px;
+  height: 100%
 }
