@@ -3,21 +3,9 @@
     <div class="small-12 columns">
       <h2>Let’s pick your best vacation this year!</h2>
       <p>It’s that time of the year, can’t wait to see you ugly faces :)</p>
-      <a href="#">Edit intro</a>
-    </div>
-  </div>
-  </section>
-<section>
-  <div class="row">
-    <div class="columns">
-      <h4 class="uppercase">Places</h4>
-    </div>
-    <!-- ++++++++++++++++++++++++++++++++++ ADD A PLACE -->
-    <div class="shrink columns">
-      <button data-default-text="0" data-toggle="placeModal">
-        <i class="material-icons">add</i>
-      </button>
-      <div class="large reveal" id="placeModal" data-reveal>
+      <a href="#" data-default-text="0" data-toggle="introModal">Edit intro</a>
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ EDIT INTRO MODAL -->
+      <div class="large reveal" id="introModal" data-reveal>
         <div class="row align-right">
           <div class="shrink columns">
             <button data-close aria-label="Close reveal" type="button">
@@ -53,8 +41,58 @@
           </div>
         </div>
       </div>
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END MODAL -->
     </div>
-    <!-- ++++++++++++++++++++++++++++++++++ END OF ADD A PLACE -->
+  </div>
+  </section>
+<section>
+  <div class="row">
+    <div class="columns">
+      <h4 class="uppercase">Places</h4>
+    </div>
+    <div class="shrink columns">
+      <button data-default-text="0" data-toggle="placeModal">
+        <i class="material-icons">add</i>
+      </button>
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ PLACE MODAL -->
+      <div class="large reveal" id="placeModal" data-reveal>
+        <div class="row align-right">
+          <div class="shrink columns">
+            <button data-close aria-label="Close reveal" type="button">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <h4 class="uppercase">Add a new place</h4>
+          </div>
+        </div>
+        <form>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Where are you going? *
+                <input type="text" placeholder="placeholder">
+              </label>
+            </div>
+            <div class="small-12 columns">
+              <label>Say why
+                <input type="text" placeholder="placeholder">
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="small-6 columns">
+            <a href="#" class="button primary">Save and close</a>
+          </div>
+          <div class="small-6 columns">
+            <a href="#">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END PLACE -->
+    </div>
   </div>
 </section>
 <section>
@@ -110,10 +148,11 @@
     </div>
     <!-- ++++++++++++++++++++++++++++++++++ ADD A DATE -->
     <div class="shrink columns">
-      <button data-default-text="0" data-toggle="placeModal">
+      <button data-default-text="0" data-toggle="dateModal">
         <i class="material-icons">add</i>
       </button>
-      <div class="large reveal" id="placeModal" data-reveal>
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ DATE MODAL -->
+      <div class="large reveal" id="dateModal" data-reveal>
         <div class="row align-right">
           <div class="shrink columns">
             <button data-close aria-label="Close reveal" type="button">
@@ -123,19 +162,78 @@
         </div>
         <div class="row">
           <div class="small-12 columns">
-            <h4 class="uppercase">edit intro</h4>
+            <h4 class="uppercase">Add an arrival date</h4>
           </div>
         </div>
         <form>
           <div class="row">
-            <div class="small-12 columns">
-              <label>Write your intro *
-                <input type="text" placeholder="placeholder">
+            <div class="small-6 columns">
+              <label>Day *
+                <select>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                </select>
               </label>
             </div>
-            <div class="small-12 columns">
-              <label>Add a description
-                <input type="text" placeholder="placeholder">
+            <div class="small-6 columns">
+              <label>Month *
+                <select>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                </select>
+              </label>
+            </div>
+            <div class="small-6 columns">
+              <label>Year *
+                <select>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="small-12 columns">
+            <h4 class="uppercase">Add a departure date</h4>
+          </div>
+        </div>
+        <form>
+          <div class="row">
+            <div class="small-6 columns">
+              <label>Day *
+                <select>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                </select>
+              </label>
+            </div>
+            <div class="small-6 columns">
+              <label>Month *
+                <select>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                </select>
+              </label>
+            </div>
+            <div class="small-6 columns">
+              <label>Year *
+                <select>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                </select>
               </label>
             </div>
           </div>
